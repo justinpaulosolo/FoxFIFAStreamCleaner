@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Sidebar Hider",
+  "version": "1.0",
+  "description": "Toggle to hide the sidebar on the FOX One FIFA live stream page.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": "icons/foxone.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.fox.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
